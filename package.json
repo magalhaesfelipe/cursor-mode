@@ -1,0 +1,37 @@
+{
+	"name": "scrolllock-cursor",
+	"displayName": "Scroll Lock Cursor Color",
+	"description": "Changes the cursor color when Scroll Lock is toggled.",
+	"version": "0.0.2",
+	"publisher": "local",
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"main": "./extension.js",
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"keybindings": [
+			{
+				"key": "scrolllock",
+				"command": "scrollLockCursor.toggle"
+			}
+		],
+		"configuration": {
+			"title": "Scroll Lock Cursor",
+			"properties": {
+				"scrollLockCursor.onColor": {
+					"type": "string",
+					"default": "#427961",
+					"description": "Cursor color when Scroll Lock is ON."
+				},
+				"scrollLockCursor.offColor": {
+					"type": "string",
+					"default": "#aeafad",
+					"description": "Cursor color when Scroll Lock is OFF."
+				}
+			}
+		}
+	}
+}
